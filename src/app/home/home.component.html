@@ -1,4 +1,31 @@
-<app-nav></app-nav>
+<nav class="navbar navbar-dark navbar-expand-lg" role="navigation">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center justify-content-lg-center w-100">
+      <a class="navbar-brand ml-lg-5" href="">
+        Rental Management System
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toogler" aria-controls="toogler" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mr-lg-5 flex-lg-row-reverse" id="toogler">
+        <ul class="navbar-nav mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle active" id="catalogDD" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Selection Location</a>
+            <div class="dropdown-menu" aria-labelledby="catalogDD" #el>
+              <a class="dropdown-item" *ngFor="let catalog of location_data" (mouseenter)="submenu.open = true" (mouseleave)="submenu.open = false">
+                {{catalog.name}}
+                <submenu [branches]="catalog.branches" #submenu></submenu>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Heading -->
 <div class="title">
   <div class="title1">
     Welcome To

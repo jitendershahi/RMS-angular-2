@@ -1,0 +1,6 @@
+<div class="submenu" *ngIf="open && branches.length">
+  <div class="dropdown-menu show">
+    <a class="dropdown-item" *ngFor="let branch of branches" (click)="selectBranch(branch,$event)">{{branch.name}}
+    </a>
+  </div>
+</div>

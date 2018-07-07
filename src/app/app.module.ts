@@ -7,6 +7,8 @@ import { BaseModule } from '@app/shared/base.module';
 import { appRoutes } from '@app/app.routing';
 import { AppComponent } from '@app/app.component';
 import { SharedModule } from '@app/shared/shared.module';
+import { UserService } from '@app/service/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,14 @@ import { SharedModule } from '@app/shared/shared.module';
   imports: [
     BrowserModule,
     CommonModule,
+    HttpClientModule,
     SharedModule,
     BaseModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

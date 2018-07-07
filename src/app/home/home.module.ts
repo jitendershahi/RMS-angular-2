@@ -4,7 +4,7 @@ import { HomeRoutingModule } from '@app/home/home-routing.module';
 import { HomeComponent } from '@app/home/home.component';
 import { BaseModule } from '@app/shared/base.module';
 import { SharedModule } from '@app/shared/shared.module';
-
+import { SubmenuComponent } from './submenu/submenu.component';
 
 @NgModule({
   imports: [
@@ -12,6 +12,6 @@ import { SharedModule } from '@app/shared/shared.module';
     HomeRoutingModule,
     SharedModule
   ],
-  declarations: [HomeComponent]
+  declarations: [HomeComponent, SubmenuComponent]
 })
 export class HomeModule { }
