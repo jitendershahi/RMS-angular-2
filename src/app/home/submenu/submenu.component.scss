@@ -1,0 +1,24 @@
+.submenu {
+  position: absolute;
+  margin-left: 132px;
+  margin-top: -37px;
+  background: white;
+  border-radius: 2px;
+}
+
+a.dropdown-item {
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+a.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu {
+  padding: 0;
+}
