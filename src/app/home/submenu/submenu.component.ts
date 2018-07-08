@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { StoreService } from '@app/store/store.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'submenu',
@@ -8,17 +10,20 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SubmenuComponent implements OnInit {
   @Input() branches: CatalogBranch[]
 
-  constructor() { }
+  constructor(private store:StoreService,
+              private router:Router) { }
 
   ngOnInit() {
   }
 
   selectBranch(branch: any, event: any) {
+    this.store.myMethod(branch)
+    this.router.navigate(['home/category'])
   }
 }
 
 export interface CatalogBranch {
-  branch_id: string
+  branch_id: string 
   name: string
   categories: Category[]
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '@app/service/user.service';
+import { StoreService } from '@app/store/store.service';
+import { AppStore } from '@app/store/AppStore';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +11,8 @@ import { UserService } from '@app/service/user.service';
 export class HomeComponent implements OnInit {
   location_data: any;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,
+    private store: StoreService) { }
 
   ngOnInit() {
     this.getLocation();

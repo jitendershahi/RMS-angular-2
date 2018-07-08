@@ -1,0 +1,19 @@
+<div class="container padding-0">
+	<div class="title black">Equipment Catalog</div>
+	<div class="separator"></div>
+	<div class="col-md-12 catalog-heading">
+		<nav aria-label="breadcrumb" role="navigation">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a [routerLink]="['/home']">Equipment Catalog</a>/Category/SubCategory</li>
+			</ol>
+		</nav>
+	</div>
+	<div class="catalog col-md-12 padding-0">
+		<div class="catalog-box col-md-3 " *ngFor="let item of subcategory_data">
+			<a class="col-md-12 padding-0" >
+				<img [src]="'assets/images/category/subcategory/'+ item.image" style="min-height: 16.3em;">
+				<a class="blue-catalog-btn hvr-bounce-to-right">{{item.name}}</a>
+			</a>
+		</div>
+	</div>
+</div>

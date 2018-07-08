@@ -9,6 +9,7 @@ import { AppComponent } from '@app/app.component';
 import { SharedModule } from '@app/shared/shared.module';
 import { UserService } from '@app/service/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreService } from '@app/store/store.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    UserService
+    UserService,
+    StoreService
   ],
   bootstrap: [AppComponent]
 })
