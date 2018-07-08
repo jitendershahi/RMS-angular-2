@@ -2,10 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
-export const routes:Routes = [
+export const routes: Routes = [
   {
-    path:'home',
-    loadChildren:'@app/home/home.module#HomeModule'
+    path: 'home',
+    loadChildren: '@app/home/home.module#HomeModule'
+  },
+  {
+    path: 'home/category',
+    loadChildren: '@app/category/category.module#CategoryModule'
+  },
+  {
+    path: 'home/category/subcategory',
+    loadChildren: '@app/subcategory/subcategory.module#SubcategoryModule'
   }
 ]
 
@@ -13,7 +21,7 @@ export const routes:Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
-    ],
+  ],
   declarations: []
 })
 export class BaseModule { }
